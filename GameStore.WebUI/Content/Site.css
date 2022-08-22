@@ -1,6 +1,8 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿
+body {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color:saddlebrown;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -15,7 +17,7 @@ select,
 textarea {
     max-width: 280px;
 }
-
-.stile{
-    background-color:aquamarine;
+.border{
+    border:solid;
+    border-radius: 20px;
 }

@@ -8,7 +8,7 @@
     new
     {
         @class = horizontal ? "btn btn-default btn-sm" :
-        "btn btn-block btn-default btn-lg"
+        "border btn btn-block btn-default btn-lg"
     })
     @foreach (var link in Model)
             {
@@ -21,7 +21,7 @@
            }, new
            {
                @class = (horizontal ? "btn btn-default btn-sm" 
-               : "btn btn-block btn-default btn- lg")
+               : "border btn btn-block btn-default btn-lg")
                + (link == ViewBag.SelectedCategory ? "btn-primary" : "")
            })
             }

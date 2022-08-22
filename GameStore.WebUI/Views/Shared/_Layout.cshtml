@@ -6,6 +6,7 @@
     <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="~/Content/ErrorStyles.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/img/12345.jpeg" rel="stylesheet"/>
     <script src="~/Scripts/jquery-1.9.0.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
@@ -23,11 +24,17 @@
     <div class="visible-xs">
         @Html.Action("Menu", "Nav", new { horizontalNav = true})
     </div>
-    <div class="row panel stile">
-        <div id="categories" class="col-xs-3 hidden-xs">
+    <div class="row panel" style="background-image:url(/img/12345.jpeg);
+                                        height:100vh;
+                                        background-repeat:no-repeat;
+                                        background-size:cover;
+                                        background-position:center;">
+        <div id="categories" class="col-xs-3 hidden-xs" style="position:sticky; top:0;">
+            
             @Html.Action("Menu", "Nav")
-        </div>
-        <div class="col-xs-12 col-sm-8">
+            
+            </div>
+        <div class="col-xs-12 col-sm-8 ">
         @RenderBody()
     </div>
     </div>
