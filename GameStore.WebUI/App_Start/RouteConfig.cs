@@ -9,6 +9,11 @@ namespace GameStore.WebUI
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapRoute(
+            name: "Home",
+            url: "",
+            defaults: new { controller = "Home", action = "Index" }
+        );
             routes.MapRoute(null,
              "",
                         new 
@@ -23,7 +28,7 @@ namespace GameStore.WebUI
             routes.MapRoute(
                 name: null,
                 url: "Page{page}",
-                defaults: new { controller = "Game", action = "List", category = (string)null },
+                defaults: new { controller = "Game", action = "List", category = (string)"ll"},
                 constraints: new { page = @"\d+"}
             );
             routes.MapRoute(null,
@@ -36,6 +41,7 @@ namespace GameStore.WebUI
                 new { page = @"\d+" }
                 );
             routes.MapRoute(null, "{controller}/{action}");
+            
         }
     }
 }

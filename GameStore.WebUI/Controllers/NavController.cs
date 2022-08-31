@@ -2,9 +2,12 @@
 using System.Linq;
 using System.Web.Mvc;
 using GameStore.Domain.Abstract;
-// кнопки
+
 namespace GameStore.WebUI.Controllers
 {
+    /// <summary>
+    /// button controller
+    /// </summary>
     public class NavController : Controller
     {
         private IGameRepository repository;
@@ -12,6 +15,12 @@ namespace GameStore.WebUI.Controllers
         {
             repository = repo;
         }
+
+        /// <summary>
+        /// load navigation
+        /// </summary>
+        /// <param name="category"></param>
+        /// <returns></returns>
         public PartialViewResult Menu(string category = null)
         {
             ViewBag.SelectedCategory = category;

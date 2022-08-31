@@ -4,7 +4,13 @@
         string wrapperClasses = horizontal ? "btn-group btn-group-sm btn-group-justified" : null;
     }
 <div class="@wrapperClasses">
-    @Html.ActionLink("Домой", "List", "Game", null,
+    @Html.ActionLink("Домой", "Index", "Home", null,
+    new
+    {
+        @class = horizontal ? "btn btn-default btn-sm" :
+        "border btn btn-block btn-default btn-lg"
+    })
+    @Html.ActionLink("Все", "List", "Game", new {category = "All"},
     new
     {
         @class = horizontal ? "btn btn-default btn-sm" :

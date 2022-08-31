@@ -17,6 +17,7 @@ namespace GameStore.WebUI.Controllers
         }
         public ViewResult List(string category, int page = 1)
         {
+           category = category == "All" ? null : category;
             GamesListViewModel model = new GamesListViewModel
             {
                 Games = repository.Games
